@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">KiemTra_LapTrinhUngDungDiDong_2474802010242</string>
+
+    <!-- LoginActivity -->
+    <string name="login_header">System Login</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="status_default">Please enter your email and password.</string>
+    <string name="error_both_empty">Error: Email and Password must not be empty!</string>
+    <string name="error_email_empty">Error: Email must not be empty!</string>
+    <string name="error_password_empty">Error: Password must not be empty!</string>
+    <string name="error_email_format">Error: Invalid email format (e.g. name@example.com)!</string>
+    <string name="error_password_length">Error: Password must be at least 6 characters!</string>
+    <string name="validation_success">Validation Successful!</string>
 </resources>
