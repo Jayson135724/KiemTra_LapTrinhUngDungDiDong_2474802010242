@@ -1,5 +1,6 @@
 package com.vanlang.kiemtra_laptrinhungdungdidong
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.view.View
@@ -70,7 +71,7 @@ class LoginActivity : AppCompatActivity() {
             password.length < MIN_PASSWORD_LENGTH -> showError(R.string.error_password_length)
 
             // 3. Completely valid data
-            else -> onValidationSuccess()
+            else -> onValidationSuccess(email)
         }
     }
 
@@ -79,8 +80,13 @@ class LoginActivity : AppCompatActivity() {
         tvStatus.setText(messageRes)
     }
 
-    private fun onValidationSuccess() {
+    private fun onValidationSuccess(email: String) {
         tvStatus.setTextColor(ContextCompat.getColor(this, R.color.status_success))
         tvStatus.setText(R.string.validation_success)
+
+        // Explicit Intent: LoginActivity -> ProfileActivity, carrying the email
+        val intent = Intent(this, ProfileActivity::class.java)
+        intent.putExtra(ProfileActivity.EXTRA_EMAIL, email)
+        startActivity(intent)
     }
 }

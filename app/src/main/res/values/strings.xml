@@ -13,4 +13,10 @@
     <string name="error_email_format">Error: Invalid email format (e.g. name@example.com)!</string>
     <string name="error_password_length">Error: Password must be at least 6 characters!</string>
     <string name="validation_success">Validation Successful!</string>
+
+    <!-- ProfileActivity -->
+    <string name="profile_header">Account Information</string>
+    <string name="profile_email">Email: %1$s</string>
+    <string name="unknown_email">(unknown)</string>
+    <string name="btn_logout">Log Out</string>
 </resources>
